@@ -28,5 +28,8 @@ mongoose.connect(process.env.DB_CONNECTION, (err) =>{
 
 const PORT = process.env.PORT || 5000; 
 
+router.get("*", (req, res) =>{
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, () => console.log(`Sever has started on port: ${PORT}`)); 
