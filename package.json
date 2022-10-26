@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
+   "engines": {
+    "node": "16.13.1"
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
