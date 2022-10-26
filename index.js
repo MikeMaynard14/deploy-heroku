@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_CONNECTION, (err) =>{
 
 const PORT = process.env.PORT || 5000; 
 
-router.get("*", (req, res) =>{
+app.get("*", (req, res) =>{
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
